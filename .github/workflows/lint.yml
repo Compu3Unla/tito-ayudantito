@@ -1,0 +1,16 @@
+name: Lint HTML/CSS
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run HTML/CSS analysis
+        uses: ./
+        with:
+          # Self-test against a known-clean fixture; point this at your submissions folder.
+          path: "tests/fixtures/good"
+          fail-on: "error"
+          lang: "es"

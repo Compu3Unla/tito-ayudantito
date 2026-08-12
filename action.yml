@@ -1,0 +1,22 @@
+name: "HTML/CSS Static Analysis (ES)"
+description: "Lints student HTML/CSS submissions and reports errors in Spanish"
+inputs:
+  path:
+    description: "Folder to scan"
+    required: false
+    default: "."
+  fail-on:
+    description: "error | warning"
+    required: false
+    default: "error"
+  lang:
+    description: "Translation table locale"
+    required: false
+    default: "es"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.fail-on }}
+    - ${{ inputs.lang }}
