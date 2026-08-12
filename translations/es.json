@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "locale": "es",
+    "updated": "2026-08-11"
+  },
+  "stylelint": {
+    "color-no-invalid-hex": "El color hexadecimal no es válido.",
+    "block-no-empty": "El bloque de reglas está vacío.",
+    "unit-no-unknown": "Unidad de medida desconocida.",
+    "property-no-unknown": "Propiedad CSS desconocida.",
+    "no-duplicate-selectors": "Selector CSS duplicado.",
+    "no-empty-source": "El archivo CSS está vacío.",
+    "declaration-block-no-duplicate-properties": "Propiedad duplicada dentro de la misma regla.",
+    "selector-type-no-unknown": "Selector de tipo desconocido (¿etiqueta HTML inexistente?).",
+    "no-invalid-position-at-import-rule": "La regla @import está en una posición inválida.",
+    "no-descending-specificity": "Un selector con menor especificidad aparece después de uno con mayor especificidad.",
+    "_default": "Error de estilo CSS: {rule}."
+  },
+  "vnu": {
+    "templates": [
+      {
+        "pattern": "^Element “(.+?)” not allowed as child of element “(.+?)” in this context\\.",
+        "message": "El elemento «{0}» no está permitido dentro del elemento «{1}» en este contexto.",
+        "params": ["tag", "parent"]
+      },
+      {
+        "pattern": "^Stray end tag “(.+?)”\\.",
+        "message": "Etiqueta de cierre suelta: «{0}».",
+        "params": ["tag"]
+      },
+      {
+        "pattern": "^Attribute “(.+?)” not allowed on element “(.+?)” at this point\\.",
+        "message": "El atributo «{0}» no está permitido en el elemento «{1}» en este punto.",
+        "params": ["attr", "tag"]
+      },
+      {
+        "pattern": "^Duplicate ID “(.+?)”\\.",
+        "message": "ID duplicado: «{0}».",
+        "params": ["id"]
+      },
+      {
+        "pattern": "^Element “(.+?)” not allowed as child of element “(.+?)” in this context\\. \\(Suppressing further errors from this subtree\\.\\)",
+        "message": "El elemento «{0}» no está permitido dentro del elemento «{1}» en este contexto. (Se suprimen más errores de esta rama.)",
+        "params": ["tag", "parent"]
+      },
+      {
+        "pattern": "^End tag “(.+?)” seen, but there were open elements\\.",
+        "message": "Se encontró la etiqueta de cierre «{0}», pero había elementos abiertos sin cerrar.",
+        "params": ["tag"]
+      },
+      {
+        "pattern": "^Unclosed element “(.+?)”\\.",
+        "message": "Elemento sin cerrar: «{0}».",
+        "params": ["tag"]
+      },
+      {
+        "pattern": "^No “(.+?)” element in scope but a “(.+?)” end tag seen\\.",
+        "message": "No hay un elemento «{0}» en alcance, pero se encontró una etiqueta de cierre «{1}».",
+        "params": ["scope", "tag"]
+      },
+      {
+        "pattern": "^The “(.+?)” attribute on the “(.+?)” element is obsolete\\..*",
+        "message": "El atributo «{0}» del elemento «{1}» está obsoleto.",
+        "params": ["attr", "tag"]
+      },
+      {
+        "pattern": "^Bad value “(.+?)” for attribute “(.+?)” on element “(.+?)”.*",
+        "message": "Valor inválido «{0}» para el atributo «{1}» en el elemento «{2}».",
+        "params": ["value", "attr", "tag"]
+      }
+    ],
+    "_default": "[sin traducir] {original}"
+  }
+}
