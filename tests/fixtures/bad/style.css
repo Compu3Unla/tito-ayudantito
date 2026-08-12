@@ -1,0 +1,15 @@
+.empty-block {
+}
+
+.bad-color {
+  color: #zzzzzz;
+}
+
+.unit {
+  width: 10xyz;
+}
+
+.dup {
+  color: red;
+  color: blue;
+}

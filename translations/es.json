@@ -67,6 +67,21 @@
         "pattern": "^Bad value “(.+?)” for attribute “(.+?)” on element “(.+?)”.*",
         "message": "Valor inválido «{0}» para el atributo «{1}» en el elemento «{2}».",
         "params": ["value", "attr", "tag"]
+      },
+      {
+        "pattern": "^The first occurrence of ID “(.+?)” was here\\.",
+        "message": "La primera aparición del ID «{0}» estaba aquí.",
+        "params": ["id"]
+      },
+      {
+        "pattern": "^Start tag “(.+?)” seen in “(.+?)”\\.",
+        "message": "Se encontró la etiqueta de apertura «{0}» dentro de «{1}».",
+        "params": ["tag", "parent"]
+      },
+      {
+        "pattern": "^Cannot recover after last error\\. Any further errors will be ignored\\.",
+        "message": "No se pudo continuar después del último error. Se ignorarán los errores restantes.",
+        "params": []
       }
     ],
     "_default": "[sin traducir] {original}"
