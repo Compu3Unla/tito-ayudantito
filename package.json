@@ -1,0 +1,22 @@
+{
+  "name": "html-css-lint-es",
+  "version": "1.0.0",
+  "description": "Static analysis for student HTML/CSS submissions with translated (Spanish) diagnostics, runnable locally or as a GitHub Action.",
+  "main": "src/analyze.js",
+  "bin": {
+    "html-css-lint-es": "src/analyze.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/",
+    "analyze": "node src/analyze.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "minimist": "^1.2.8",
+    "postcss-safe-parser": "^7.0.1",
+    "stylelint": "^16.9.0",
+    "vnu-jar": "^24.10.17"
+  }
+}
