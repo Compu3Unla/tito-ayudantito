@@ -1,4 +1,4 @@
-FROM node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0
+FROM node:24-slim@sha256:3638d9a6fe4030bd716be989438248074489337ba3275657f93595428be4fc03
 
 # vnu-jar needs a JRE. Version pinned to what's currently available in this base
 # image's Debian release; bump alongside the base image digest when updating.
