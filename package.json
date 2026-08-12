@@ -7,6 +7,9 @@
     "html-css-lint-es": "src/analyze.js"
   },
   "type": "commonjs",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "test": "node --test tests/*.test.js",
     "analyze": "node src/analyze.js"
@@ -16,7 +19,7 @@
     "cli-table3": "0.6.5",
     "minimist": "1.2.8",
     "postcss-safe-parser": "7.0.1",
-    "stylelint": "16.26.1",
+    "stylelint": "17.14.1",
     "vnu-jar": "26.8.6"
   }
 }
