@@ -70,7 +70,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run HTML/CSS analysis
         uses: your-org/html-css-lint-es@v1
         with:
@@ -91,6 +91,16 @@ Consumer repos pin a tag (`@v1`), so after making changes:
 git tag -f v1
 git push -f origin v1
 ```
+
+## Dependency pinning
+
+To keep the supply chain reproducible and avoid pulling in newly-disclosed vulnerabilities unnoticed:
+
+- `package.json` pins exact npm versions (no `^`/`~`); `package-lock.json` is committed.
+- `Dockerfile`'s `FROM` is pinned by digest (`node:20-slim@sha256:...`), and `default-jre-headless` is pinned to a specific Debian package version.
+- `actions/checkout` in workflows is pinned to a commit SHA, not a mutable tag.
+
+When bumping any of these, re-run `npm audit`, rebuild the Docker image, and re-run the test suite / fixtures before committing.
 
 ## Development
 

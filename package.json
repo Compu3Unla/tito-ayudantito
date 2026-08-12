@@ -13,10 +13,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cli-table3": "^0.6.5",
-    "minimist": "^1.2.8",
-    "postcss-safe-parser": "^7.0.1",
-    "stylelint": "^16.9.0",
-    "vnu-jar": "^24.10.17"
+    "cli-table3": "0.6.5",
+    "minimist": "1.2.8",
+    "postcss-safe-parser": "7.0.1",
+    "stylelint": "16.26.1",
+    "vnu-jar": "26.8.6"
   }
 }
