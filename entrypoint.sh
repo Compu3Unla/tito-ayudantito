@@ -6,7 +6,7 @@ FAIL_ON="$2"
 LANG_CODE="$3"
 
 set +e
-node src/analyze.js \
+node /action/src/analyze.js \
   --dir "$TARGET_DIR" \
   --lang "$LANG_CODE" \
   --format md \
